@@ -237,7 +237,6 @@ const WorkerDashboard = () => {
                             {job.location}
                           </div>
                           <div className="flex items-center gap-1">
-                            <DollarSign className="h-3 w-3" />
                             {job.salary}
                           </div>
                           <Badge variant="secondary">{job.type}</Badge>
@@ -319,7 +318,6 @@ const WorkerDashboard = () => {
                             {job.location}
                           </div>
                           <div className="flex items-center gap-1">
-                            <DollarSign className="h-3 w-3" />
                             {job.salary}
                           </div>
                         </div>

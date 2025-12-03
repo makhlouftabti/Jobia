@@ -2,59 +2,67 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Check, Sparkles, Crown, Rocket } from "lucide-react";
+import { ArrowLeft, Check, Sparkles, Crown, Rocket, Building2 } from "lucide-react";
 
 const Pricing = () => {
   const plans = [
     {
-      name: "Gratuit",
+      name: "Forfait Gratuit",
       price: "0 DZD",
       period: "/mois",
-      description: "Parfait pour commencer",
+      description: "Pour les très petites entreprises ou celles qui souhaitent tester la plateforme avant de s’abonner",
       icon: Sparkles,
       popular: false,
       features: [
-        "5 candidatures par mois",
-        "Recherche d'emplois de base",
-        "Profil simple",
-        "Notifications par email",
-        "Support communautaire"
+        "Publier une offre d’emploi tous les 30 jours",
+        "Possibilité de modifier l’annonce une seule fois",
+        "Réception d’un nombre limité de CV",
       ]
     },
     {
-      name: "Premium",
-      price: "1 200 DZD",
+      name: "Forfait Basique",
+      price: "3 000 DZD",
       period: "/mois",
-      description: "Pour les chercheurs d'emploi actifs",
+      description: "Pour les petites entreprises et les start-ups",
       icon: Crown,
-      popular: true,
-      features: [
-        "Candidatures illimitées",
-        "Matching IA avancé",
-        "Profil prioritaire",
-        "Notifications push",
-        "Support par chat",
-        "Statistiques détaillées",
-        "CV premium"
-      ]
-    },
-    {
-      name: "Entreprise",
-      price: "6 500 DZD",
-      period: "/mois",
-      description: "Pour les entreprises qui recrutent",
-      icon: Rocket,
       popular: false,
       features: [
-        "Publication d'emplois illimitée",
-        "Candidats illimités",
-        "Outils de tri avancés",
-        "Tableau de bord analytique",
-        "Support prioritaire",
-        "Intégration API",
-        "Manager d'équipe"
+        "Publier 3 annonces par mois",
+        "Durée de validité de l’annonce : 30 jours",
+        "Accès limité à la base de données (selon la localisation géographique ou le domaine professionnel)",
       ]
-    }
+    },
+    {
+      name: "Forfait Avancé",
+      price: "6 000 DZD",
+      period: "/mois",
+      description: "Pour les entreprises moyennes",
+      icon: Rocket,
+      popular: true,
+      features: [
+        "Publier 10 annonces par mois",
+        "Durée de validité de l’annonce : 45 jours",
+        "Accès élargi aux candidats",
+        "Système de correspondance intelligent affichant le taux de compatibilité entre les exigences et le candidat",
+        "Outils essentiels pour accélérer le recrutement",
+      ]
+    },
+    {
+      name: "Forfait Premium",
+      price: "10 000 DZD",
+      period: "/mois",
+      description: "Pour les grandes entreprises",
+      icon: Building2,
+      popular: false,
+      features: [
+        "Publication illimitée d’annonces",
+        "Possibilité de promouvoir les annonces",
+        "Validité ouverte ou renouvellement automatique",
+        "Accès complet aux candidats",
+        "Système de correspondance avancé + analyses professionnelles",
+        "Priorité dans les résultats de recherche",
+      ]
+    },
   ];
 
   return (
@@ -82,7 +90,7 @@ const Pricing = () => {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <Card 
               key={index} 

@@ -54,6 +54,7 @@ const CompanyDashboard = () => {
       rating: 4.8,
       location: "Alger",
       status: "pending",
+      fr_status: "En attente",
       appliedAt: "il y a 2 heures"
     },
     {
@@ -63,6 +64,7 @@ const CompanyDashboard = () => {
       rating: 4.9,
       location: "Sétif",
       status: "reviewed",
+      fr_status: "Examiné",
       appliedAt: "il y a 5 heures"
     },
     {
@@ -72,6 +74,7 @@ const CompanyDashboard = () => {
       rating: 4.7,
       location: "Oran", 
       status: "pending",
+      fr_status: "En attente",
       appliedAt: "il y a 1 jour"
     }
   ];
@@ -259,7 +262,7 @@ const CompanyDashboard = () => {
                       <div className="flex items-center gap-4">
                         <div className="flex items-center gap-2">
                           {getStatusIcon(application.status)}
-                          <span className="text-sm capitalize">{application.status}</span>
+                          <span className="text-sm">{application.fr_status}</span>
                         </div>
                         <span className="text-xs text-muted-foreground">{application.appliedAt}</span>
                         <div className="flex gap-2">
